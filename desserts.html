@@ -1,0 +1,310 @@
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7292QS26D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W7292QS26D');
+    </script>
+    
+    <title>Beverages & Desserts - My Food Log</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="robots" content="index,follow">
+
+    <meta name="description" 
+        content="Welcome to My Food Log! The purpose of this website is to provide a brief information about the 
+        delicious and affordable food restaurants and cafes around Kuala Lumpur and Selangor.">
+    
+    <meta name="keywords" 
+        content="LocalFood, MalaysianStyle, Waffles, LocalDrinks, HorKaSai, SaiKaHor, WesternFood, 
+        Pasta, Steak, KoreanFriedChicken, ArmyStew, KoreanFood, JapaneseFood, Satay, Cake, VietnameseFood, TaiwaneseFood, 
+        AiYuJelly, KoreaBBQ, HealthyLightMeal, NutritiousShake, JapaneseStyleKoreanFood, HealthyFood, ChineseFood, 
+        ShanghaiStyle, FiveGrainsNoodles, ShavedIce, MilkShavedIce, TauFuFah, SmallBites, SoyDrinks, Coffee, Cake, 
+        Pastry, Yogurt, YogurtDrinks, FrozenYogurt">
+    
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="topnav">
+        <img src="img/MyFoodLog.png" style="width: 150px; height: 50px;">
+    
+        <div class="topnav-right">
+            <a href="index.html">Home</a>
+            <a href="mains.html">Main Courses</a>
+            <a class="active" href="desserts.html">Beverages & Desserts</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Beverages & Desserts</h1>
+            
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Shop Cards Container -->
+    <div class="shop-cards-container">
+        <!-- Shop Card 1 -->
+        <div class="shop-card" onclick="openModal(1)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/VillaJuBakery.jpg" alt="Villa Ju Bakery Cafe" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Villa Ju Bakery Cafe</div>
+                <div class="shop-card-address">13A & 13A-1, Jalan Solaris 4, Solaris Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 2 -->
+        <div class="shop-card" onclick="openModal(2)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/AftermealDesserts.jpg" alt="Aftermeal Desserts" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Aftermeal Desserts</div>
+                <div class="shop-card-address">127, Jalan Rimbunan Raya 1 Laman Rimbunan, Kepong, 52100 Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 3 -->
+        <div class="shop-card" onclick="openModal(3)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/SoybeanFactory.jpg" alt="The Soybean Factory" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">The Soybean Factory</div>
+                <div class="shop-card-address">51, Jalan 3/62A, Jalan Kepong, Bandar Sri Menjalara, 52200 Kuala Lumpur
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Card 4 -->
+        <div class="shop-card" onclick="openModal(4)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/CoffeeBean&TeaLeaf.jpg" alt="The Coffee Bean & Tea Leaf" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">The Coffee Bean & Tea Leaf</div>
+                <div class="shop-card-address">Lot C3.01.00, Level 3 Pavilion, 168, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Card 5 -->
+        <div class="shop-card" onclick="openModal(5)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/JoyyoYogurt.jpg" alt="Joyyo Yogurt" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Joyyo Yogurt</div>
+                <div class="shop-card-address">21, Jln 5/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Card 6 -->
+        <div class="shop-card" onclick="openModal(6)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/LlaoLlao.jpg" alt="llaollao" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">llaollao</div>
+                <div class="shop-card-address">Lot No KG3, Ground Floor, Metro Prima Shopping Centre, Metro Prima, 52100 Kuala Lumpur, Federal Territory of Kuala Lumpur
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal" id="shopModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            
+            <!-- Carousel -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-inner" id="carouselInner">
+                        <!-- Images will be dynamically inserted here -->
+                    </div>
+                    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+            
+            <!-- Shop Info -->
+            <div class="shop-info">
+                <br>
+                <h1 class="shop-info-name" id="modalShopName"></h1>
+                <div class="shop-info-address" id="modalShopAddress"></div>
+                
+                <div class="shop-info-details" id="modalShopDetails">
+                    <!-- Details will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample shop data
+        const shops = {
+            1: {
+                name: "Villa Ju Bakery Cafe",
+                address: "13A & 13A-1, Jalan Solaris 4, Solaris Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/VillaJuBakery.jpg",
+                    "img/VillaJuBakery1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 8 AM - 12 AM" },
+                    { label: "Specialty", value: "#ShavedIce #Cake #Pastry" }
+]
+            },
+            2: {
+                name: "Aftermeal Desserts",
+                address: "127, Jalan Rimbunan Raya 1 Laman Rimbunan, Kepong, 52100 Kuala Lumpur",
+                images: [
+                    "thumbnail/AftermealDesserts.jpg",
+                    "img/AftermealDesserts1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 1 PM - 12 AM" },
+                    { label: "Specialty", value: "#ShavedIce #MilkShavedIce #Cake" }
+]
+            },
+            3: {
+                name: "The Soybean Factory",
+                address: "51, Jalan 3/62A, Jalan Kepong, Bandar Sri Menjalara, 52200 Kuala Lumpur",
+                images: [
+                    "thumbnail/SoybeanFactory.jpg",
+                    "img/SoybeanFactory1.jpg",
+                    "img/SoybeanFactory2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 12 PM - 11 PM" },
+                    { label: "Specialty", value: "#TauFuFah #SmallBites #SoyDrinks" }
+]
+            },
+            4: {
+                name: "The Coffee Bean & Tea Leaf",
+                address: "Lot C3.01.00, Level 3 Pavilion, 168, Jln Bukit Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/CoffeeBean&TeaLeaf.jpg",
+                    "img/CoffeeBean&TeaLeaf1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Sun - Thu: 7 AM - 11 PM, Fri - Sat: 7 AM - 12 AM" },
+                    { label: "Specialty", value: "#Coffee #Cake #Pastry" }
+]
+            },
+            5: {
+                name: "Joyyo Yogurt",
+                address: "21, Jln 5/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/JoyyoYogurt.jpg",
+                    "img/JoyyoYogurt1.jpg",
+                    "img/JoyyoYogurt2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 11 AM - 11 PM" },
+                    { label: "Specialty", value: "#Yogurt #YogurtDrinks" }
+]
+            },
+            6: {
+                name: "llaollao",
+                address: "Lot No KG3, Ground Floor, Metro Prima Shopping Centre, Metro Prima, 52100 Kuala Lumpur, Federal Territory of Kuala Lumpur",
+                images: [
+                    "thumbnail/LlaoLlao.jpg",
+                    "img/LlaoLlao1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 10 PM" },
+                    { label: "Specialty", value: "#FrozenYogurt" }
+]
+            }
+        };
+
+        // JavaScript functionality
+        let currentSlide = 0;
+        let totalSlides = 0;
+
+        function openModal(shopId) {
+            const shop = shops[shopId];
+            if (!shop) return;
+
+            // Set shop info
+            document.getElementById('modalShopName').textContent = shop.name;
+            document.getElementById('modalShopAddress').textContent = shop.address;
+            
+            // Set shop details
+            const detailsContainer = document.getElementById('modalShopDetails');
+            detailsContainer.innerHTML = shop.details.map(detail => `
+                <div class="detail-item">
+                    <span class="detail-label">${detail.label}:</span>
+                    <span class="detail-value">${detail.value}</span>
+                </div>
+            `).join('');
+
+            // Set carousel images
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.innerHTML = shop.images.map(img => `
+                <div class="carousel-item">
+                    <img src="${img}" alt="Shop Image">
+                </div>
+            `).join('');
+
+            // Reset carousel
+            currentSlide = 0;
+            totalSlides = shop.images.length;
+            updateCarousel();
+
+            // Show modal
+            document.getElementById('shopModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Scroll to top of modal when opened
+            document.querySelector('.modal').scrollTo(0, 0);
+        }
+
+        function closeModal() {
+            document.getElementById('shopModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Close modal when clicking outside of content
+        window.onclick = function(event) {
+            const modal = document.getElementById('shopModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+<footer>2025, My Food Log</footer>
+</html>

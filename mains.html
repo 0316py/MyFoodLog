@@ -1,0 +1,624 @@
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7292QS26D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W7292QS26D');
+    </script>
+    
+    <title>Main Courses - My Food Log</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="robots" content="index,follow">
+
+    <meta name="description" 
+        content="Welcome to My Food Log! The purpose of this website is to provide a brief information about the 
+        delicious and affordable food restaurants and cafes around Kuala Lumpur and Selangor.">
+
+    <meta name="keywords" 
+        content="LocalFood, MalaysianStyle, Waffles, LocalDrinks, HorKaSai, SaiKaHor, WesternFood, Pasta, Steak, 
+        KoreanFriedChicken, ArmyStew, KoreanFood, JapaneseFood, Satay, Cake, VietnameseFood, TaiwaneseFood, AiYuJelly, 
+        KoreaBBQ, HealthyLightMeal, NutritiousShake, JapaneseStyleKoreanFood, HealthyFood, ChineseFood, ShanghaiStyle, 
+        FiveGrainsNoodles, ShavedIce, TauFuFah, SmallBites, SoyDrinks, Coffee, Cake, Pastry, Yogurt, YogurtDrinks, FrozenYogurt">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="topnav">
+        <img src="img/MyFoodLog.png" style="width: 150px; height: 50px;">
+    
+        <div class="topnav-right">
+            <a href="index.html">Home</a>
+            <a class="active" href="mains.html">Main Courses</a>
+            <a href="desserts.html">Beverages & Desserts</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Main Courses</h1>
+            
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Shop Cards Container -->
+    <div class="shop-cards-container">
+        <!-- Shop Card 1 -->
+        <div class="shop-card" onclick="openModal(1)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/TheFoodCourt.jpg" alt="The Food Court" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">The Food Court</div>
+                <div class="shop-card-address">Lot B1-02, Pusat Perdagangan Berpadu (United Point), Jalan Lang Emas, Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 2 -->
+        <div class="shop-card" onclick="openModal(2)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/Wolfgang.jpg" alt="Wolfgang Cafe" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Wolfgang Cafe</div>
+                <div class="shop-card-address">77, Jln Rimbunan Raya 1, Laman Rimbunan, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 3 -->
+        <div class="shop-card" onclick="openModal(3)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/HookieDookieLounge&Bar.jpg" alt="Hookie Dookie Lounge & Bar" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Hookie Dookie Lounge & Bar</div>
+                <div class="shop-card-address">G-G-13, Perdana, Plaza Arkadia, No 3, Jalan Intisari, Desa Parkcity, 52200 Kuala Lumpur, Selangor</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 4 -->
+        <div class="shop-card" onclick="openModal(4)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/ChickenHouseSolaris.jpg" alt="Chicken House Solaris" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Chicken House Solaris</div>
+                <div class="shop-card-address">15G, Jalan Solaris 4, Solaris Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 5 -->
+        <div class="shop-card" onclick="openModal(5)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/HanGangKoreanRestaurant.jpg" alt="Han Gang Korean Restaurant" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Han Gang Korean Restaurant</div>
+                <div class="shop-card-address">Unit 4-01-J & 4-01-L, 4th Floor Food Street, Sunway Velocity Mall, Jalan Cheras, 55100, Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 6 -->
+        <div class="shop-card" onclick="openModal(6)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/Zen&Co.jpg" alt="Zen & Co" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Zen & Co</div>
+                <div class="shop-card-address">53, Jalan 3/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 7 -->
+        <div class="shop-card" onclick="openModal(7)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/LaxLax.jpg" alt="Lax Lax Restaurant" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Lax Lax Restaurant</div>
+                <div class="shop-card-address">LG612, Lower Ground Floor, 1 Utama Shopping Centre, 1, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor</div>
+            </div>
+        </div>
+
+        <!-- Shop Card 8 -->
+        <div class="shop-card" onclick="openModal(8)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/SecretRecipe.jpg" alt="Secret Recipe" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Secret Recipe</div>
+                <div class="shop-card-address">G-27, Ground Floor, United Point, No. 10, Jalan Lang Emas, 52100 Kuala Lumpur, Federal Territory of Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(9)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/IchibanRamen.jpg" alt="Ichiban Ramen" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Ichiban Ramen</div>
+                <div class="shop-card-address">Lotus Kepong, F13, 3, Jalan 7A/62A, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(10)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/DiViet.jpg" alt="Di Viet" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Di Viet</div>
+                <div class="shop-card-address">LG-K09, Pusat Perdagangan Berpadu (United Point), Jalan Lang Emas, Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(11)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/TaipeiWalker.jpg" alt="Taipei Walker Cafe" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Taipei Walker Cafe</div>
+                <div class="shop-card-address">B-G-10 BELLAMY, PLAZA ARKADIA NO.3 intisari perdana, Desa Parkcity, 52200 Kuala Lumpur, Federal Territory of Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(12)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/HaeWaDalBBQ.jpg" alt="Hae Wa Dal BBQ" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Hae Wa Dal BBQ</div>
+                <div class="shop-card-address">A-1-3 & A-1-3A, Plaza TTDI, Jalan Wan Kadir 3, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(13)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/ChuuKoffi.jpg" alt="初 Chuu Koffi" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">初 Chuu Koffi</div>
+                <div class="shop-card-address">53, Jalan 11/62a, Bandar Menjalara, 52200 Menjalara, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(14)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/TsuruhashiKoreanTown.jpg" alt="Tsuruhashi Korean Town" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Tsuruhashi Korean Town</div>
+                <div class="shop-card-address">District K, 1 Utama Shopping Centre, LG 613A, Central Park Avenue, Bandar Utama, 47800 Petaling Jaya, Selangor</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(15)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/YoungSannaMee.jpg" alt="Young Sanna Mee" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Young Sanna Mee</div>
+                <div class="shop-card-address">75, Jalan 3/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(16)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/TanHotpot.jpg" alt="Tan Hotpot" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Tan Hotpot</div>
+                <div class="shop-card-address">Unit 1-7, Plaza Manjalara 1, Jalan Menjalara Idaman Bandar Menjalara, Kepong, 52200 Kepong, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(17)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/Ohtea.jpg" alt="Ohtea Western Cuisine & Cafe" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">Ohtea Western Cuisine & Cafe</div>
+                <div class="shop-card-address">11, Jln 5/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(18)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/ShanghaiStreet.jpg" alt="上海弄堂 Shanghai Street" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">上海弄堂 Shanghai Street</div>
+                <div class="shop-card-address">17, Jalan 4/62a, Bandar Menjalara, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+        <div class="shop-card" onclick="openModal(19)">
+            <div class="shop-card-image-container">
+                <img src="thumbnail/5GrainsNoodle.jpg" alt="五谷渔粉 • Five Grains Noodles" class="shop-card-image">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-name">五谷渔粉 • Five Grains Noodles</div>
+                <div class="shop-card-address">83, Jalan 3/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal" id="shopModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            
+            <!-- Carousel -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-inner" id="carouselInner">
+                        <!-- Images will be dynamically inserted here -->
+                    </div>
+                    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+            
+            <!-- Shop Info -->
+            <div class="shop-info">
+                <br>
+                <h1 class="shop-info-name" id="modalShopName"></h1>
+                <div class="shop-info-address" id="modalShopAddress"></div>
+                
+                <div class="shop-info-details" id="modalShopDetails">
+                    <!-- Details will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample shop data
+        const shops = {
+            1: {
+                name: "The Food Court",
+                address: "Lot B1-02, Pusat Perdagangan Berpadu (United Point, Jalan Lang Emas, Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/TheFoodCourt.jpg",
+                    "img/TheFoodCourt1.jpg",
+                    "img/TheFoodCourt2.jpg",
+                    "img/TheFoodCourt3.jpg",
+                    "img/TheFoodCourt4.jpg",
+                    "img/TheFoodCourt5.jpg",
+                    "img/TheFoodCourt6.jpg",
+                    "img/TheFoodCourt7.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 10 PM" },
+                    { label: "Specialty", value: "#LocalFood #MalaysianStyle #Waffles #LocalDrinks #HorKaSai #SaiKaHor" }
+]
+            },
+            2: {
+                name: "Wolfgang Cafe",
+                address: "77, Jln Rimbunan Raya 1, Laman Rimbunan, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/Wolfgang.jpg",
+                    "img/Wolfgang1.jpg",
+                    "img/Wolfgang2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Tue: Closed, Mon - Sun: 11.30 AM - 10.30 PM" },
+                    { label: "Specialty", value: "#WesternFood #Pasta #Steak" }
+]
+            },
+            3: {
+                name: "Hookie Dookie Lounge & Bar",
+                address: "G-G-13, Perdana, Plaza Arkadia, No 3, Jalan Intisari, Desa Parkcity, 52200 Kuala Lumpur, Selangor",
+                images: [
+                    "thumbnail/HookieDookieLounge&Bar.jpg",
+                    "img/HookieDookieLounge&Bar1.jpg",
+                    "img/HookieDookieLounge&Bar2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 11.30 AM - 12 AM" },
+                    { label: "Specialty", value: "#WesternFood #Pasta #Steak" }                
+]
+            },
+            4: {
+                name: "Chicken House Solaris",
+                address: "15G, Jalan Solaris 4, Solaris Mont Kiara, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/ChickenHouseSolaris.jpg",
+                    "img/ChickenHouseSolaris1.jpg",
+                    "img/ChickenHouseSolaris2.jpg",
+                    "img/ChickenHouseSolaris3.jpg",
+                    "img/ChickenHouseSolaris4.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 11.30 AM - 11 PM" },
+                    { label: "Specialty", value: "#KoreanFriedChicken #ArmyStew" }
+]
+            },
+            5: {
+                name: "Han Gang Korean Restaurant",
+                address: "Unit 4-01-J & 4-01-L, 4th Floor Food Street, Sunway Velocity Mall, Jalan Cheras, 55100, Kuala Lumpur",
+                images: [
+                    "thumbnail/HanGangKoreanRestaurant.jpg",
+                    "img/HanGangKoreanRestaurant1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 10 PM" },
+                    { label: "Specialty", value: "#KoreanFood" }
+]
+            },
+            6: {
+                name: "Zen & Co",
+                address: "53, Jalan 3/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/Zen&Co.jpg",
+                    "img/Zen&Co1.jpg",
+                    "img/Zen&Co2.jpg",
+                    "img/Zen&Co3.jpg",
+                    "img/Zen&Co4.jpg",
+                    "img/Zen&Co5.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 12 PM - 10 PM" },
+                    { label: "Specialty", value: "#JapaneseFood #WesternFood " }
+]
+            },
+            7: {
+                name: "Lax Lax Restaurant",
+                address: "LG612, Lower Ground Floor, 1 Utama Shopping Centre, 1, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor",
+                images: [
+                    "thumbnail/LaxLax.jpg",
+                    "img/LaxLax1.jpg",
+                    "img/LaxLax2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Sun - Thu: 11 AM - 10 PM, Fri - Sat: 11 AM - 10.30 PM" },
+                    { label: "Specialty", value: "#LocalFood #MalaysianStyle #Satay " }
+]
+            },
+            8: {
+                name: "Secret Recipe",
+                address: "G-27, Ground Floor, United Point, No. 10, Jalan Lang Emas, 52100 Kuala Lumpur, Federal Territory of Kuala Lumpur",
+                images: [
+                    "thumbnail/SecretRecipe.jpg",
+                    "img/SecretRecipe1.jpg",
+                    "img/SecretRecipe2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 10 PM" },
+                    { label: "Specialty", value: "#LocalFood #MalaysianStyle #Cake" }
+]
+            },
+            9: {
+                name: "Ichiban Ramen",
+                address: "Lotus Kepong, F13, 3, Jalan 7A/62A, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/IchibanRamen.jpg",
+                    "img/IchibanRamen1.jpg",
+                    "img/IchibanRamen2.jpg",
+                    "img/IchibanRamen3.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 9.30 PM" },
+                    { label: "Specialty", value: "#JapaneseFood" }
+]
+            },
+            10: {
+                name: "Di Viet",
+                address: "LG-K09, Pusat Perdagangan Berpadu (United Point, Jalan Lang Emas, Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/DiViet.jpg",
+                    "img/DiViet1.jpg",
+                    "img/DiViet2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 10 PM" },
+                    { label: "Specialty", value: "#VietnameseFood" }
+]
+            },
+            11: {
+                name: "Taipei Walker Cafe",
+                address: "B-G-10 BELLAMY, PLAZA ARKADIA NO.3 intisari perdana, Desa Parkcity, 52200 Kuala Lumpur, Federal Territory of Kuala Lumpur",
+                images: [
+                    "thumbnail/TaipeiWalker.jpg",
+                    "img/TaipeiWalker1.jpg",
+                    "img/TaipeiWalker2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Tue: Closed, Mon - Sun: 11 AM - 3 PM, 5.30 PM - 10.30 PM" },
+                    { label: "Specialty", value: "#TaiwaneseFood #AiYuJelly" }
+]
+            },
+            12: {
+                name: "Hae Wa Dal BBQ",
+                address: "A-1-3 & A-1-3A, Plaza TTDI, Jalan Wan Kadir 3, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/HaeWaDalBBQ.jpg",
+                    "img/HaeWaDalBBQ1.jpg",
+                    "img/HaeWaDalBBQ2.jpg",
+                    "img/HaeWaDalBBQ3.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 11.30 AM - 10 PM" },
+                    { label: "Specialty", value: "#KoreanFood #KoreaBBQ" }
+]
+            },
+            13: {
+                name: "初 Chuu Koffi",
+                address: "53, Jalan 11/62a, Bandar Menjalara, 52200 Menjalara, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/ChuuKoffi.jpg",
+                    "img/ChuuKoffi1.jpg",
+                    "img/ChuuKoffi2.jpg",
+                    "img/ChuuKoffi3.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Tue: Closed, Wed - Fri: 7.30 AM - 7 PM, Sat - Mon: 7.30 AM - 3 PM" },
+                    { label: "Specialty", value: "#HealthyLightMeal #NutritiousShake" }
+]
+            },
+            14: {
+                name: "Tsuruhashi Korean Town",
+                address: "District K, 1 Utama Shopping Centre, LG 613A, Central Park Avenue, Bandar Utama, 47800 Petaling Jaya, Selangor",
+                images: [
+                    "thumbnail/TsuruhashiKoreanTown.jpg",
+                    "img/TsuruhashiKoreanTown1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 11 AM - 10 PM" },
+                    { label: "Specialty", value: "#JapaneseStyleKoreanFood" }
+]
+            },
+            15: {
+                name: "Young Sanna Mee",
+                address: "75, Jalan 3/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/YoungSannaMee.jpg",
+                    "img/YoungSannaMee1.jpg",
+                    "img/YoungSannaMee2.jpg",
+                    "img/YoungSannaMee3.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 11 AM - 11 PM" },
+                    { label: "Specialty", value: "#HealthyFood" }
+]
+            },
+            16: {
+                name: "Tan Hotpot",
+                address: "Unit 1-7, Plaza Manjalara 1, Jalan Menjalara Idaman Bandar Menjalara, Kepong, 52200 Kepong, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/YoungSannaMee.jpg",
+                    "img/TanHotpot1.jpg",
+                    "img/TanHotpot2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 12 PM - 11 PM" },
+                    { label: "Specialty", value: "#ChineseFood" }
+
+]
+            },
+            17: {
+                name: "Ohtea Western Cuisine & Cafe",
+                address: "11, Jln 5/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/Ohtea.jpg",
+                    "img/Ohtea1.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 12 PM - 9.30 PM" },
+                    { label: "Specialty", value: "#WesternFood" }
+]
+            },
+            18: {
+                name: "上海弄堂 Shanghai Street",
+                address: "17, Jalan 4/62a, Bandar Menjalara, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/ShanghaiStreet.jpg",
+                    "img/ShanghaiStreet1.jpg",
+                    "img/ShanghaiStreet2.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Fri: 10 AM - 9.30 PM, Sat - Sun: 8 AM - 9.30 PM" },
+                    { label: "Specialty", value: "#ChineseFood #ShanghaiStyle" }
+]
+            },
+            19: {
+                name: "五谷渔粉 • Five Grains Noodles",
+                address: "83, Jalan 3/62a, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+                images: [
+                    "thumbnail/5GrainsNoodle.jpg",
+                    "img/5GrainsNoodle1.jpg",
+                    "img/5GrainsNoodle2.jpg",
+                    "img/5GrainsNoodle3.jpg"
+                ],
+                details: [
+                    { label: "Opening Hours", value: "Mon - Sun: 10 AM - 10 PM" },
+                    { label: "Specialty", value: "#FiveGrainsNoodles" }
+]
+            }
+            
+        };
+
+        // JavaScript functionality
+        let currentSlide = 0;
+        let totalSlides = 0;
+
+        function openModal(shopId) {
+            const shop = shops[shopId];
+            if (!shop) return;
+
+            // Set shop info
+            document.getElementById('modalShopName').textContent = shop.name;
+            document.getElementById('modalShopAddress').textContent = shop.address;
+            
+            // Set shop details
+            const detailsContainer = document.getElementById('modalShopDetails');
+            detailsContainer.innerHTML = shop.details.map(detail => `
+                <div class="detail-item">
+                    <span class="detail-label">${detail.label}:</span>
+                    <span class="detail-value">${detail.value}</span>
+                </div>
+            `).join('');
+
+            // Set carousel images
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.innerHTML = shop.images.map(img => `
+                <div class="carousel-item">
+                    <img src="${img}" alt="Shop Image">
+                </div>
+            `).join('');
+
+            // Reset carousel
+            currentSlide = 0;
+            totalSlides = shop.images.length;
+            updateCarousel();
+
+            // Show modal
+            document.getElementById('shopModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Scroll to top of modal when opened
+            document.querySelector('.modal').scrollTo(0, 0);
+        }
+
+        function closeModal() {
+            document.getElementById('shopModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Close modal when clicking outside of content
+        window.onclick = function(event) {
+            const modal = document.getElementById('shopModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+<footer>2025, My Food Log</footer>
+</html>
