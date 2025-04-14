@@ -81,6 +81,7 @@ footer{
     position: absolute;
     top: 50%;
     left: 50%;
+    bottom: 30%;
     transform: translate(-50%, -50%);
     color: black;
   }
@@ -100,6 +101,7 @@ footer{
     position: absolute;
     top: 35%;
     left: 50%;
+    bottom: 35%;
     transform: translate(-50%, -50%);
     color: black;
   }
@@ -213,6 +215,7 @@ button:hover {
 .modal-content {
   background: white;
   width: 100%;
+  height: fit-content;
   max-width: 700px;
   margin: 20px auto;
   border-radius: 10px;
@@ -377,14 +380,23 @@ button:hover {
   
   .modal {
       padding: 10px;
+      
   }
-  
+  .modal-content{
+      height: fit-content;
+  }
+
   .shop-info {
       padding: 0 20px 20px 20px;
   }
   
   .shop-info-name {
       font-size: 1.5rem;
+  }
+
+  .button-align {
+    justify-content: center;
+    margin: 30px 250px;
   }
 }
 
@@ -400,12 +412,24 @@ button:hover {
   .modal {
       padding: 5px;
   }
-  
+  .modal-content{
+    height: fit-content;
+}
+
   .shop-info {
       padding: 0 15px 15px 15px;
   }
   
   .shop-info-name {
       font-size: 1.3rem;
+  }
+
+  .hero-image2{
+    height: 100vh;
+  }
+  .hero-text2 {
+    top: 30%;
+    left: 50%;
+    bottom: 15%;
   }
 }
