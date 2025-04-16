@@ -12,6 +12,8 @@
     
     <title>Main Courses - My Food Log</title>
 
+    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="robots" content="index,follow">
@@ -28,6 +30,7 @@
         YogurtDrinks, FrozenYogurt">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
 
   <body>
@@ -51,9 +54,22 @@
 
     <br>
 
+    <!-- Search Container -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." id="searchInput">
+        <div class="search-btn" id="searchBtn">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <!-- No results message -->
+    <div class="no-results" id="noResults">
+        No result found matching your search.
+    </div>
+
     <!-- Shop Cards Container -->
     <div class="shop-cards-container">
-        <!-- Shop Card 1 -->
+
         <div class="shop-card" onclick="openModal(1)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/TheFoodCourt.jpg" alt="The Food Court" class="shop-card-image">
@@ -64,7 +80,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 2 -->
         <div class="shop-card" onclick="openModal(2)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/Wolfgang.jpg" alt="Wolfgang Cafe" class="shop-card-image">
@@ -75,7 +90,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 3 -->
         <div class="shop-card" onclick="openModal(3)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/HookieDookieLounge&Bar.jpg" alt="Hookie Dookie Lounge & Bar" class="shop-card-image">
@@ -86,7 +100,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 4 -->
         <div class="shop-card" onclick="openModal(4)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/ChickenHouseSolaris.jpg" alt="Chicken House Solaris" class="shop-card-image">
@@ -97,7 +110,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 5 -->
         <div class="shop-card" onclick="openModal(5)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/HanGangKoreanRestaurant.jpg" alt="Han Gang Korean Restaurant" class="shop-card-image">
@@ -108,7 +120,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 6 -->
         <div class="shop-card" onclick="openModal(6)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/Zen&Co.jpg" alt="Zen & Co" class="shop-card-image">
@@ -119,7 +130,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 7 -->
         <div class="shop-card" onclick="openModal(7)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/LaxLax.jpg" alt="Lax Lax Restaurant" class="shop-card-image">
@@ -130,7 +140,6 @@
             </div>
         </div>
 
-        <!-- Shop Card 8 -->
         <div class="shop-card" onclick="openModal(8)">
             <div class="shop-card-image-container">
                 <img src="thumbnail/SecretRecipe.jpg" alt="Secret Recipe" class="shop-card-image">
@@ -284,7 +293,6 @@
     </div>
 
     <script>
-        // Sample shop data
         const shops = {
             1: {
                 name: "The Food Court",
@@ -618,6 +626,76 @@
                 closeModal();
             }
         }
+
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBtn = document.getElementById('searchBtn');
+            const searchInput = document.getElementById('searchInput');
+            const shopCardsContainer = document.getElementById('shopCardsContainer');
+            const noResults = document.getElementById('noResults');
+            const shopCards = document.querySelectorAll('.shop-card');
+            
+            // Toggle search input
+            searchBtn.addEventListener('click', function() {
+                searchInput.classList.toggle('active');
+                if (searchInput.classList.contains('active')) {
+                    searchInput.focus();
+                }
+            });
+            
+            // Search function
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let hasResults = false;
+                
+                // Only filter if there's a search term
+                if (searchTerm.length > 0) {
+                    shopCards.forEach(card => {
+                        const name = card.querySelector('.shop-card-name').textContent.toLowerCase();
+                        const address = card.querySelector('.shop-card-address').textContent.toLowerCase();
+                        
+                        if (name.includes(searchTerm) || address.includes(searchTerm)) {
+                            card.style.display = 'display'; // Show matching cards
+                            hasResults = true;
+                        } else {
+                            card.style.display = 'none'; // Hide non-matching cards
+                        }
+                    });
+                    
+                    // Show/hide no results message
+                    if (!hasResults) {
+                        noResults.style.display = 'block';
+                        shopCardsContainer.style.display = 'none';
+                    } else {
+                        noResults.style.display = 'none';
+                        shopCardsContainer.style.display = 'display';
+                    }
+                } else {
+                    // If search is empty, show all cards and reset styles
+                    shopCards.forEach(card => {
+                        card.style.display = 'display'; // Reset to original display
+                        card.style.removeProperty('display'); // Even better - remove inline style completely
+                    });
+                    noResults.style.display = 'none';
+                    shopCardsContainer.style.display = 'display';
+                }
+            });
+
+            // Close search when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!searchBtn.contains(event.target) && !searchInput.contains(event.target)) {
+                    if (searchInput.value === '') {
+                        searchInput.classList.remove('active');
+                        // Reset all cards when search is closed
+                        shopCards.forEach(card => {
+                            card.style.removeProperty('display');
+                        });
+                        noResults.style.display = 'none';
+                        shopCardsContainer.style.display = 'display';
+                    }
+                }
+            });
+        });
     </script>
 </body>
 
