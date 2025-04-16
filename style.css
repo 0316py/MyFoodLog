@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Georgia", serif;
+  font-family: Georgia, serif;
 }
 
 body {
@@ -129,6 +129,70 @@ button {
 button:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Search Container Styles */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 20px 30px 20px;
+  position: relative;
+}
+
+.search-input {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  border-radius: 25px;
+  padding: 0 20px;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateX(20px);
+  cursor: pointer;
+}
+
+.search-input.active {
+  width: 250px;
+  opacity: 1;
+  transform: translateX(0);
+  cursor: text;
+}
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.search-btn:hover {
+  background: #e0e0e0;
+}
+
+.search-btn i {
+  font-size: 20px;
+  color: #333;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+  display: none;
 }
 
 /* Shop Cards Container */
